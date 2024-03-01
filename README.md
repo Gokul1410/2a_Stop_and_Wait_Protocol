@@ -9,6 +9,39 @@ To write a python program to perform stop and wait protocol
 5. If your frames reach the server it will send ACK signal to client
 6. Stop the Program
 ## PROGRAM
+### CLIENT:
+```
+import socket
+s=socket.socket()
+s.bind(('localhost',8000))
+s.listen(5)
+c,addr=s.accept()
+while True:
+ i=input("Enter a data: ")
+ c.send(i.encode())
+ ack=c.recv(1024).decode()
+ if ack:
+   print(ack)
+   continue
+ else:
+   c.close()
+   break
+```
+### SERVER:
+```
+   import socket
+s=socket.socket()
+s.connect(('localhost',8000))
+while True:
+ print(s.recv(1024).decode())
+ s.send("Acknowledgement Recived".encode())
+```
 ## OUTPUT
+### CLIENT
+![image](https://github.com/Gokul1410/2a_Stop_and_Wait_Protocol/assets/153058321/016ac8f3-7ce4-45ce-8e78-55487781f951)
+
+### SERVER
+![image](https://github.com/Gokul1410/2a_Stop_and_Wait_Protocol/assets/153058321/6deee3da-e4da-40c1-9121-cece6d04a14e)
+
 ## RESULT
 Thus, python program to perform stop and wait protocol was successfully executed.

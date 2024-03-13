@@ -29,7 +29,7 @@ while True:
 ```
 ### SERVER:
 ```
-   import socket
+import socket
 s=socket.socket()
 s.connect(('localhost',8000))
 while True:
@@ -38,10 +38,11 @@ while True:
 ```
 ## OUTPUT
 ### CLIENT
-![image](https://github.com/Gokul1410/2a_Stop_and_Wait_Protocol/assets/153058321/016ac8f3-7ce4-45ce-8e78-55487781f951)
+![Screenshot 2024-03-12 181351](https://github.com/Gokul1410/2a_Stop_and_Wait_Protocol/assets/153058321/2f9181ed-0f5a-473b-817b-80e7428570cf)
 
 ### SERVER
-![image](https://github.com/Gokul1410/2a_Stop_and_Wait_Protocol/assets/153058321/6deee3da-e4da-40c1-9121-cece6d04a14e)
+![Screenshot 2024-03-12 181429](https://github.com/Gokul1410/2a_Stop_and_Wait_Protocol/assets/153058321/c9791473-7a2e-41bb-8686-e1b23dbf2420)
+
 
 ## RESULT
 Thus, python program to perform stop and wait protocol was successfully executed.
